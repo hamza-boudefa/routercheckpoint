@@ -1,7 +1,9 @@
+import { Button } from 'react-bootstrap';
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
+import { LinkContainer } from 'react-router-bootstrap';
 import StarsRating from 'stars-rating';
 
 const NavBar = ({searchMovie,nejma}) => {
@@ -24,6 +26,13 @@ const NavBar = ({searchMovie,nejma}) => {
           </Form>
           <StarsRating count={5} size={30} onChange={(e)=>nejma(e)}/>
         </Navbar.Collapse>
+        <LinkContainer to="/">
+        <Button >Home</Button>
+        </LinkContainer>
+        <LinkContainer to="/trailers">
+        <Button >Trailers</Button>
+        </LinkContainer>
+        
       </Container>
     </Navbar>
     </div>

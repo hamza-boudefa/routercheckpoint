@@ -27,11 +27,13 @@ const rateMovie=(a)=>{
   return (
     <div className="App">
       <NavBar  searchMovie={searchMovie} nejma={rateMovie}  />
-     <MovieList movies={movies} search={search} rating={rating} />
-     <AddMovie add={add} />
-     <Routes> 
+      <Routes> 
+
+    <Route path='/' element={<MovieList  movies={movies} search={search} rating={rating} />} /> 
+
      <Route path="/movie/:id" element={<Trailer movies={movies} />} />
      </Routes>
+     <AddMovie add={add} />
     </div>
   );
 }

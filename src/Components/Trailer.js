@@ -3,7 +3,7 @@ import Iframe from 'react-iframe'
 import {useParams} from 'react-router-dom'
 const Trailer = ({movies}) => {
    const{id}=useParams()
-   const movie = movies.find((el)=>el.id=id)
+   const movie = movies.find((el)=>el.id==id)
    console.log(movie)
     return (
         <div> 
